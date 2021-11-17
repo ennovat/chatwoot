@@ -45,6 +45,8 @@ class Conversation < ApplicationRecord
   include Labelable
   include AssignmentHandler
   include RoundRobinHandler
+  include Wisper::Publisher
+
 
   validates :account_id, presence: true
   validates :inbox_id, presence: true
