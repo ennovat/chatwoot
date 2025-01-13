@@ -3,9 +3,11 @@
     "NOT_AVAILABLE": "Không có sẵn",
     "EMAIL_ADDRESS": "Địa chỉ email",
     "PHONE_NUMBER": "Số điện thoại",
+    "IDENTIFIER": "Định danh",
     "COPY_SUCCESSFUL": "Đã sao chép mã thành công",
     "COMPANY": "Công ty",
     "LOCATION": "Vị trí",
+    "BROWSER_LANGUAGE": "Ngôn ngữ của Trình duyệt",
     "CONVERSATION_TITLE": "Chi tiết của cuộc trò chuyện",
     "VIEW_PROFILE": "Xem hồ sơ cá nhân",
     "BROWSER": "Trình duyệt",
@@ -13,6 +15,7 @@
     "INITIATED_FROM": "Bắt đầu từ",
     "INITIATED_AT": "Bắt đầu lúc",
     "IP_ADDRESS": "Địa chỉ IP",
+    "CREATED_AT_LABEL": "Đã tạo",
     "NEW_MESSAGE": "Tin nhắn mới",
     "CONVERSATIONS": {
       "NO_RECORDS_FOUND": "Không có cuộc trò chuyện trước đó được liên kết với liên hệ này.",
@@ -30,21 +33,23 @@
       "LABEL_SELECT": {
         "TITLE": "Thêm nhãn",
         "PLACEHOLDER": "Tìm nhãn",
-        "NO_RESULT": "Không tìm thấy nhãn"
+        "NO_RESULT": "Không tìm thấy nhãn",
+        "CREATE_LABEL": "Tạo mới nhãn"
       }
     },
-    "MERGE_CONTACT": "Gộp liên lạc",
-    "CONTACT_ACTIONS": "Hành động của người liên hệ",
-    "MUTE_CONTACT": "Tắt tiếng cuộc trò chuyện",
-    "UNMUTE_CONTACT": "Bật tiếng cuộc trò chuyện",
-    "MUTED_SUCCESS": "Cuộc trò chuyện này bị tắt tiếng trong 6 giờ",
-    "UNMUTED_SUCCESS": "Cuộc trò chuyện này được bật tiếng",
+    "MERGE_CONTACT": "Hợp nhất liên hệ",
+    "CONTACT_ACTIONS": "Hành động với liên hệ",
+    "MUTE_CONTACT": "Block Contact",
+    "UNMUTE_CONTACT": "Unblock Contact",
+    "MUTED_SUCCESS": "This contact is blocked successfully. You will not be notified of any future conversations.",
+    "UNMUTED_SUCCESS": "This contact is unblocked successfully.",
     "SEND_TRANSCRIPT": "Gửi bản ghi",
     "EDIT_LABEL": "Chỉnh sửa",
     "SIDEBAR_SECTIONS": {
       "CUSTOM_ATTRIBUTES": "Thuộc tính tùy chỉnh",
       "CONTACT_LABELS": "Nhãn danh bạ",
-      "PREVIOUS_CONVERSATIONS": "Cuộc trò chuyện trước đó"
+      "PREVIOUS_CONVERSATIONS": "Cuộc trò chuyện trước đó",
+      "NO_RECORDS_FOUND": "Không có thuộc tính nào được tìm thấy"
     }
   },
   "EDIT_CONTACT": {
@@ -53,26 +58,48 @@
     "DESC": "Chỉnh sửa liên hệ chi tiết"
   },
   "CREATE_CONTACT": {
-    "BUTTON_LABEL": "Liên lạc mới",
-    "TITLE": "Tạo liên lạc mới",
-    "DESC": "Thêm thông tin cơ bản về liên lạc."
+    "BUTTON_LABEL": "Liên hệ mới",
+    "TITLE": "Tạo liên hệ mới",
+    "DESC": "Thêm thông tin cơ bản về liên hệ."
   },
   "IMPORT_CONTACTS": {
     "BUTTON_LABEL": "Nhập",
-    "TITLE": "Nhập liên lạc",
-    "DESC": "Nhập liên lạc bằng một file CSV.",
-    "DOWNLOAD_LABEL": "Tải xuống file CSV mẫu.",
+    "TITLE": "Nhập liên hệ",
+    "DESC": "Nhập liên hệ bằng một file CSV.",
+    "DOWNLOAD_LABEL": "Tải xuống tệp CSV mẫu.",
     "FORM": {
-      "LABEL": "CSV File",
+      "LABEL": "Tệp CSV",
       "SUBMIT": "Nhập",
       "CANCEL": "Huỷ"
     },
-    "SUCCESS_MESSAGE": "Liên hệ được lưu thành công",
+    "SUCCESS_MESSAGE": "You will be notified via email when the import is complete.",
     "ERROR_MESSAGE": "Đã có lỗi, vui lòng thử lại"
+  },
+  "EXPORT_CONTACTS": {
+    "BUTTON_LABEL": "Export",
+    "TITLE": "Export Contacts",
+    "DESC": "Export contacts to a CSV file.",
+    "SUCCESS_MESSAGE": "Export is in progress, You will be notified via email when export file is ready to dowanlod.",
+    "ERROR_MESSAGE": "Đã có lỗi, vui lòng thử lại",
+    "CONFIRM": {
+      "TITLE": "Export Contacts",
+      "MESSAGE": "Are you sure you want to export all contacts?",
+      "FILTERED_MESSAGE": "Are you sure you want to export all the filtered contacts?",
+      "YES": "Yes, Export",
+      "NO": "No, Cancel"
+    }
+  },
+  "DELETE_NOTE": {
+    "CONFIRM": {
+      "TITLE": "Xác nhận xoá",
+      "MESSAGE": "Bạn có chắc chắn muốn xoá ghi chú này?",
+      "YES": "Có, xoá",
+      "NO": "Không, Giữ"
+    }
   },
   "DELETE_CONTACT": {
     "BUTTON_LABEL": "Xoá liên lạc",
-    "TITLE": "Xoá liên lạc",
+    "TITLE": "Xoá liên hệ",
     "DESC": "Xoá chi tiết liên hệ",
     "CONFIRM": {
       "TITLE": "Xác nhận xoá",
@@ -103,13 +130,15 @@
       "EMAIL_ADDRESS": {
         "PLACEHOLDER": "Nhập địa chỉ email của liên hệ",
         "LABEL": "Email",
-        "DUPLICATE": "Địa chỉ email này đang được sử dụng cho một liên hệ khác."
+        "DUPLICATE": "Địa chỉ email này đang được sử dụng cho một liên hệ khác.",
+        "ERROR": "Vui lòng nhập một địa chỉ email hợp lệ."
       },
       "PHONE_NUMBER": {
         "PLACEHOLDER": "Nhập số điện thoại của liên hệ",
         "LABEL": "Số điện thoại",
-        "HELP": "Số điện thoại phải thuộc định đạng E.164 như: +1415555555 [+][mã nước][mã khu vực][số điện thoại vùng]",
+        "HELP": "Phone number should be of E.164 format eg: +1415555555 [+][country code][area code][local phone number]. You can select the dial code from the dropdown.",
         "ERROR": "Số điện thoại nên rỗng hoặc thuộc định dạng E.164",
+        "DIAL_CODE_ERROR": "Please select a dial code from the list",
         "DUPLICATE": "Số điện thoại này đang được dùng cho một liên hệ khác."
       },
       "LOCATION": {
@@ -119,6 +148,17 @@
       "COMPANY_NAME": {
         "PLACEHOLDER": "Nhập tên công ty",
         "LABEL": "Tên công ty"
+      },
+      "COUNTRY": {
+        "PLACEHOLDER": "Nhập tên thành phố",
+        "LABEL": "Tên nước",
+        "SELECT_PLACEHOLDER": "Chọn",
+        "REMOVE": "Xoá",
+        "SELECT_COUNTRY": "Select Country"
+      },
+      "CITY": {
+        "PLACEHOLDER": "Enter the city name",
+        "LABEL": "Thành phố"
       },
       "SOCIAL_PROFILES": {
         "FACEBOOK": {
@@ -139,21 +179,28 @@
         }
       }
     },
+    "DELETE_AVATAR": {
+      "API": {
+        "SUCCESS_MESSAGE": "Hình đại diện liên hệ đã được xóa thành công",
+        "ERROR_MESSAGE": "Không thể xóa hình đại diện liên hệ. Vui lòng thử lại sau."
+      }
+    },
     "SUCCESS_MESSAGE": "Liên hệ được lưu thành công",
     "ERROR_MESSAGE": "Đã có lỗi, vui lòng thử lại"
   },
   "NEW_CONVERSATION": {
-    "BUTTON_LABEL": "Bắt đầu cuộc trò chuyện",
+    "BUTTON_LABEL": "Bắt đầu cuộc hội thoại",
     "TITLE": "Tạo mới cuộc trò chuyện",
-    "DESC": "Bắt đầu một cuộc trò chuyện mới bằng cách thêm tin nhắn.",
-    "NO_INBOX": "Không tìm thấy hộp thư đến để bắt đầu cuộc trò chuyện với liên hệ này.",
+    "DESC": "Bắt đầu một cuộc hội thoại mới bằng cách thêm tin nhắn.",
+    "NO_INBOX": "Không tìm thấy kênh để bắt đầu cuộc trò chuyện với liên hệ này.",
     "FORM": {
       "TO": {
         "LABEL": "Đến"
       },
       "INBOX": {
-        "LABEL": "Hộp thư đến",
-        "ERROR": "Chọn Hộp thư đến"
+        "LABEL": "Via Inbox",
+        "PLACEHOLDER": "Choose source inbox",
+        "ERROR": "Chọn kênh"
       },
       "SUBJECT": {
         "LABEL": "Chủ đề",
@@ -165,6 +212,10 @@
         "PLACEHOLDER": "Viết tin nhắn ở đây",
         "ERROR": "Tin nhắn không được rỗng"
       },
+      "ATTACHMENTS": {
+        "SELECT": "Chọn File",
+        "HELP_TEXT": "Kéo thả file đính kèm tại đây"
+      },
       "SUBMIT": "Gửi tin nhắn",
       "CANCEL": "Huỷ",
       "SUCCESS_MESSAGE": "Tin nhắn đã được gửi!",
@@ -173,13 +224,14 @@
     }
   },
   "CONTACTS_PAGE": {
-    "HEADER": "Liên hệ",
-    "FIELDS": "Trường của liên hệ",
+    "HEADER": "Danh bạ",
+    "FIELDS": "Các trường của liên hệ",
     "SEARCH_BUTTON": "Tìm kiếm",
     "SEARCH_INPUT_PLACEHOLDER": "Tìm kiếm liên hệ",
     "FILTER_CONTACTS": "Lọc",
     "FILTER_CONTACTS_SAVE": "Lưu bộ lọc",
     "FILTER_CONTACTS_DELETE": "Xoá bộ lọc",
+    "FILTER_CONTACTS_EDIT": "Sửa bộ lọc",
     "LIST": {
       "LOADING_MESSAGE": "Đang tải liên hệ...",
       "404": "Không có liên hệ nào khớp với tìm kiếm của bạn 🔍",
@@ -189,17 +241,18 @@
         "PHONE_NUMBER": "Số điện thoại",
         "CONVERSATIONS": "Các cuộc hội thoại",
         "LAST_ACTIVITY": "Hành động cuối cùng",
+        "CREATED_AT": "Tạo vào lúc",
         "COUNTRY": "Quốc gia",
         "CITY": "Tỉnh / Thành phố",
-        "SOCIAL_PROFILES": "Hồ sơ xã hội",
+        "SOCIAL_PROFILES": "Hồ sơ mạng xã hội",
         "COMPANY": "Công ty",
         "EMAIL_ADDRESS": "Email"
       },
-      "VIEW_DETAILS": "Xem thông tin chi tiết"
+      "VIEW_DETAILS": "Xem chi tiết"
     }
   },
   "CONTACT_PROFILE": {
-    "BACK_BUTTON": "Liên hệ",
+    "BACK_BUTTON": "Danh bạ",
     "LOADING": "Đang tải hồ sơ liên hệ..."
   },
   "REMINDER": {
@@ -232,7 +285,7 @@
   },
   "EVENTS": {
     "HEADER": {
-      "TITLE": "Hoạt động"
+      "TITLE": "Các hoạt động"
     },
     "BUTTON": {
       "PILL_BUTTON_NOTES": "các ghi chú",
@@ -245,6 +298,8 @@
     "BUTTON": "Thêm thuộc tính tùy chỉnh",
     "NOT_AVAILABLE": "Không có thuộc tính tuỳ chỉnh nào có sẵn cho liên hệ này.",
     "COPY_SUCCESSFUL": "Đã sao chép mã thành công",
+    "SHOW_MORE": "Show all attributes",
+    "SHOW_LESS": "Show less attributes",
     "ACTIONS": {
       "COPY": "Sao chép thuộc tính",
       "DELETE": "Xoá thuộc tính",
@@ -294,37 +349,41 @@
     },
     "VALIDATIONS": {
       "REQUIRED": "Giá trị hợp lệ bắt buộc có",
-      "INVALID_URL": "URL không hợp lệ"
+      "INVALID_URL": "URL không hợp lệ",
+      "INVALID_INPUT": "Invalid Input"
     }
   },
   "MERGE_CONTACTS": {
-    "TITLE": "Gộp các liên hệ",
-    "DESCRIPTION": "Gộp các liên hệ để kết hợp hai hồ sơ thành một, bao gồm tất cả các thuộc tính và cuộc hội thoại. Trong trường hợp xung đột, các thuộc tính của liên hệ Chính sẽ được ưu tiên.",
+    "TITLE": "Hợp nhất các liên hệ",
+    "DESCRIPTION": "Hợp nhất các liên hệ để kết hợp hai hồ sơ thành một, bao gồm tất cả các thuộc tính và hội thoại. Trong trường hợp xung đột, các thuộc tính của liên hệ Chính sẽ được ưu tiên.",
     "PRIMARY": {
-      "TITLE": "Liên lạc chính",
-      "HELP_LABEL": "Được giữ"
-    },
-    "CHILD": {
-      "TITLE": "Liên lạc cần gộp",
-      "PLACEHOLDER": "Tìm kiếm liên hệ",
+      "TITLE": "Liên hệ chính",
       "HELP_LABEL": "Sẽ được xoá"
+    },
+    "PARENT": {
+      "TITLE": "Liên hệ cần gộp",
+      "PLACEHOLDER": "Tìm kiếm liên hệ",
+      "HELP_LABEL": "Được giữ"
     },
     "SUMMARY": {
       "TITLE": "Tóm tắt",
-      "DELETE_WARNING": "Liên hệ của <strong>%{childContactName}</strong> sẽ bị xoá.",
-      "ATTRIBUTE_WARNING": "\bChi tiết liên hệ của <strong>%{childContactName}</strong> \bsẽ được sao chép đến <strong>%{primaryContactName}</strong>."
+      "DELETE_WARNING": "Liên hệ của <strong>{primaryContactName}</strong> sẽ bị xoá.",
+      "ATTRIBUTE_WARNING": "\bChi tiết liên hệ của <strong>{primaryContactName}</strong> \bsẽ được sao chép đến <strong>{parentContactName}</strong>."
     },
     "SEARCH": {
       "ERROR": "ERROR_MESSAGE"
     },
     "FORM": {
-      "SUBMIT": " Gộp các liên hệ",
+      "SUBMIT": " Hợp nhất các liên hệ",
       "CANCEL": "Huỷ",
       "CHILD_CONTACT": {
-        "ERROR": "Chọn một liên lạc con để gộp"
+        "ERROR": "Chọn một liên hệ con để gộp"
       },
-      "SUCCESS_MESSAGE": "Liên lạc được gộp thành công",
-      "ERROR_MESSAGE": "Không thể gộp liên lạc, thử lại!"
+      "SUCCESS_MESSAGE": "Liên hệ được gộp thành công",
+      "ERROR_MESSAGE": "Không thể hợp nhất liên lạc, thử lại!"
+    },
+    "DROPDOWN_ITEM": {
+      "ID": "(ID: {identifier})"
     }
   }
 }

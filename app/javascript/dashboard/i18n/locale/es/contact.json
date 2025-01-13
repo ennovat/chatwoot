@@ -3,9 +3,11 @@
     "NOT_AVAILABLE": "No Disponible",
     "EMAIL_ADDRESS": "Dirección de correo",
     "PHONE_NUMBER": "Número de teléfono",
+    "IDENTIFIER": "Idenrificador",
     "COPY_SUCCESSFUL": "Copiado al portapapeles satisfactoriamente",
     "COMPANY": "Empresa",
     "LOCATION": "Ubicación",
+    "BROWSER_LANGUAGE": "Idioma del navegador",
     "CONVERSATION_TITLE": "Detalles de la conversación",
     "VIEW_PROFILE": "Ver Perfil",
     "BROWSER": "Navegador",
@@ -13,6 +15,7 @@
     "INITIATED_FROM": "Iniciado desde",
     "INITIATED_AT": "Iniciado el",
     "IP_ADDRESS": "Dirección IP",
+    "CREATED_AT_LABEL": "Creado",
     "NEW_MESSAGE": "Nuevo mensaje",
     "CONVERSATIONS": {
       "NO_RECORDS_FOUND": "No hay conversaciones previas asociadas a este contacto.",
@@ -30,21 +33,23 @@
       "LABEL_SELECT": {
         "TITLE": "Añadir etiquetas",
         "PLACEHOLDER": "Buscar etiquetas",
-        "NO_RESULT": "No se encontraron etiquetas"
+        "NO_RESULT": "No se encontraron etiquetas",
+        "CREATE_LABEL": "Crear nueva etiqueta"
       }
     },
     "MERGE_CONTACT": "Combinar contacto",
     "CONTACT_ACTIONS": "Acciones de contacto",
-    "MUTE_CONTACT": "Silenciar Conversación",
-    "UNMUTE_CONTACT": "Dessilenciar conversación",
-    "MUTED_SUCCESS": "Ésta conversación está silenciada por 6 horas",
-    "UNMUTED_SUCCESS": "Ésta conversación ya no está silenciada",
+    "MUTE_CONTACT": "Bloquear contacto",
+    "UNMUTE_CONTACT": "Desbloquear contacto",
+    "MUTED_SUCCESS": "Este contacto está bloqueado con éxito. No se te notificará de ninguna conversación futura.",
+    "UNMUTED_SUCCESS": "Este contacto está desbloqueado correctamente.",
     "SEND_TRANSCRIPT": "Enviar Transcripción",
     "EDIT_LABEL": "Editar",
     "SIDEBAR_SECTIONS": {
       "CUSTOM_ATTRIBUTES": "Atributos personalizados",
       "CONTACT_LABELS": "Etiqueta de Contacto",
-      "PREVIOUS_CONVERSATIONS": "Conversaciones anteriores"
+      "PREVIOUS_CONVERSATIONS": "Conversaciones anteriores",
+      "NO_RECORDS_FOUND": "No se encontraron atributos"
     }
   },
   "EDIT_CONTACT": {
@@ -67,8 +72,30 @@
       "SUBMIT": "Importar",
       "CANCEL": "Cancelar"
     },
-    "SUCCESS_MESSAGE": "Contacto guardado correctamente",
+    "SUCCESS_MESSAGE": "Se le notificará por correo electrónico cuando se complete la importación.",
     "ERROR_MESSAGE": "Hubo un error, por favor inténtelo de nuevo"
+  },
+  "EXPORT_CONTACTS": {
+    "BUTTON_LABEL": "Exportar",
+    "TITLE": "Exportar contactos",
+    "DESC": "Exportar contactos a un archivo CSV.",
+    "SUCCESS_MESSAGE": "El proceso de exportar esta en proceso. Será notificado por correo cuando el archivo esté listo para descargar.",
+    "ERROR_MESSAGE": "Hubo un error, por favor inténtelo de nuevo",
+    "CONFIRM": {
+      "TITLE": "Exportar contactos",
+      "MESSAGE": "¿Está seguro que desea exportar todos los contactos?",
+      "FILTERED_MESSAGE": "¿Está seguro que desea exportar todos los contactos filtrados?",
+      "YES": "Sí, exportar",
+      "NO": "No, cancelar"
+    }
+  },
+  "DELETE_NOTE": {
+    "CONFIRM": {
+      "TITLE": "Confirmar eliminación",
+      "MESSAGE": "¿Está seguro de eliminar esta nota?",
+      "YES": "Sí, eliminar",
+      "NO": "No, mantenerlo"
+    }
   },
   "DELETE_CONTACT": {
     "BUTTON_LABEL": "Eliminar contacto",
@@ -103,13 +130,15 @@
       "EMAIL_ADDRESS": {
         "PLACEHOLDER": "Escriba la dirección email del contacto",
         "LABEL": "Dirección de correo",
-        "DUPLICATE": "Ésta dirección de correo está siendo utilizada por otro contacto."
+        "DUPLICATE": "Ésta dirección de correo está siendo utilizada por otro contacto.",
+        "ERROR": "Por favor, introduzca una dirección de correo válida."
       },
       "PHONE_NUMBER": {
         "PLACEHOLDER": "Escriba el número de teléfono del contacto",
         "LABEL": "Número telefónico",
         "HELP": "El número telefónico debe tener el formato E.164, por ejemplo: +753001234567 [+][código del país][código de área][número teléfonico]",
         "ERROR": "El número telefónico debe estar vacío o en formato E.164",
+        "DIAL_CODE_ERROR": "Por favor, seleccione un código de marcado de la lista",
         "DUPLICATE": "Este número de teléfono está en uso para otro contacto."
       },
       "LOCATION": {
@@ -119,6 +148,17 @@
       "COMPANY_NAME": {
         "PLACEHOLDER": "Escriba el nombre de la empresa",
         "LABEL": "Empresa"
+      },
+      "COUNTRY": {
+        "PLACEHOLDER": "Introduzca el nombre del país",
+        "LABEL": "Nombre del país",
+        "SELECT_PLACEHOLDER": "Seleccionar",
+        "REMOVE": "Eliminar",
+        "SELECT_COUNTRY": "Seleccionar país"
+      },
+      "CITY": {
+        "PLACEHOLDER": "Introduzca el nombre de la ciudad",
+        "LABEL": "Nombre de ciudad"
       },
       "SOCIAL_PROFILES": {
         "FACEBOOK": {
@@ -139,6 +179,12 @@
         }
       }
     },
+    "DELETE_AVATAR": {
+      "API": {
+        "SUCCESS_MESSAGE": "Avatar de contacto eliminado correctamente",
+        "ERROR_MESSAGE": "No se pudo eliminar el avatar de contacto. Por favor, inténtelo de nuevo más tarde."
+      }
+    },
     "SUCCESS_MESSAGE": "Contacto guardado correctamente",
     "ERROR_MESSAGE": "Hubo un error, por favor inténtelo de nuevo"
   },
@@ -153,6 +199,7 @@
       },
       "INBOX": {
         "LABEL": "Bandeja de entrada",
+        "PLACEHOLDER": "Elegir bandeja de entrada",
         "ERROR": "Seleccione una bandeja de entrada"
       },
       "SUBJECT": {
@@ -164,6 +211,10 @@
         "LABEL": "Mensaje",
         "PLACEHOLDER": "Escriba su mensaje aquí",
         "ERROR": "El mensaje no puede estar vacío"
+      },
+      "ATTACHMENTS": {
+        "SELECT": "Seleccionar archivos",
+        "HELP_TEXT": "Arrastre y suelte los archivos aquí o elige archivos para adjuntar"
       },
       "SUBMIT": "Enviar mensaje",
       "CANCEL": "Cancelar",
@@ -180,6 +231,7 @@
     "FILTER_CONTACTS": "Filtro",
     "FILTER_CONTACTS_SAVE": "Guardar filtro",
     "FILTER_CONTACTS_DELETE": "Eliminar filtro",
+    "FILTER_CONTACTS_EDIT": "Editar segmento",
     "LIST": {
       "LOADING_MESSAGE": "Cargando contactos...",
       "404": "No hay contactos que coincidan con tu búsqueda 🔍",
@@ -189,6 +241,7 @@
         "PHONE_NUMBER": "Número telefónico",
         "CONVERSATIONS": "Conversaciones",
         "LAST_ACTIVITY": "Última actividad",
+        "CREATED_AT": "Creado el",
         "COUNTRY": "País",
         "CITY": "Ciudad",
         "SOCIAL_PROFILES": "Perfiles Sociales",
@@ -245,6 +298,8 @@
     "BUTTON": "Añadir atributo personalizado",
     "NOT_AVAILABLE": "No hay atributos personalizados disponibles para este contacto.",
     "COPY_SUCCESSFUL": "Copiado al portapapeles satisfactoriamente",
+    "SHOW_MORE": "Mostrar todos los atributos",
+    "SHOW_LESS": "Mostrar menos atributos",
     "ACTIONS": {
       "COPY": "Copiar atributo",
       "DELETE": "Eliminar atributo",
@@ -294,7 +349,8 @@
     },
     "VALIDATIONS": {
       "REQUIRED": "Se requiere un valor válido",
-      "INVALID_URL": "URL inválida"
+      "INVALID_URL": "URL inválida",
+      "INVALID_INPUT": "Ingreso inválido"
     }
   },
   "MERGE_CONTACTS": {
@@ -302,17 +358,17 @@
     "DESCRIPTION": "Fusionar los contactos para combinar dos perfiles en uno, incluyendo todos los atributos y conversaciones.",
     "PRIMARY": {
       "TITLE": "Contacto principal",
-      "HELP_LABEL": "Mantener"
+      "HELP_LABEL": "A eliminar"
     },
-    "CHILD": {
+    "PARENT": {
       "TITLE": "Contacto para combinar",
       "PLACEHOLDER": "Buscar un contacto",
-      "HELP_LABEL": "A eliminar"
+      "HELP_LABEL": "Mantener"
     },
     "SUMMARY": {
       "TITLE": "Resumen",
-      "DELETE_WARNING": "El contacto de <strong>%{childContactName}</strong> se eliminará.",
-      "ATTRIBUTE_WARNING": "Los datos de contacto de <strong>%{childContactName}</strong> se copiarán en <strong>%{primaryContactName}</strong>."
+      "DELETE_WARNING": "El contacto de <strong>{primaryContactName}</strong> se eliminará.",
+      "ATTRIBUTE_WARNING": "Los datos de contacto de <strong>{primaryContactName}</strong> se copiarán en <strong>{parentContactName}</strong>."
     },
     "SEARCH": {
       "ERROR": "ERROR"
@@ -325,6 +381,9 @@
       },
       "SUCCESS_MESSAGE": "Contacto fusionado con éxito",
       "ERROR_MESSAGE": "No se pudo combinar los contactos, ¡inténtalo de nuevo!"
+    },
+    "DROPDOWN_ITEM": {
+      "ID": "(ID: {identifier})"
     }
   }
 }
